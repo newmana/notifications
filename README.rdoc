@@ -1,0 +1,3 @@
+== Notifications using Websockets
+
+Simple example using Rails, ActiveMQ, JavaScript, STOMP and Websockets.
