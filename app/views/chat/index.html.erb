@@ -1,11 +1,6 @@
-<!--<title>Chat Example Using Stomp Over WebSocket</title>-->
-<!--<link rel="stylesheet" href="chat.css" />-->
-<!--<script>-->
-<!--</script>-->
-<!--</head>-->
 <% content_for :javascript do %>
-    <script src='javascripts/stomp.js'></script>
-    <script src='javascripts/chat.js'></script>
+    <script src='/assets/stomp.js'></script>
+    <script src='/assets/chat.js'></script>
     <script type='text/javascript'>
         $(document).ready(function() {
           var supported = ("WebSocket" in window);
@@ -47,7 +42,4 @@
 <pre id="debug"></pre>
 <div id="messages">
 </div>
-<form id='send_form'>
-  <input id='send_form_input' placeholder="Type your message here" disabled/>
-</form>
 

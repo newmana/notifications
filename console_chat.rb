@@ -1,7 +1,7 @@
 require 'stomp'
 
 class ConsoleChat
-  def initialize
+  def initialize(user_name)
     hash = {
       :hosts => [
         # First connect is to remotehost1
@@ -29,16 +29,14 @@ class ConsoleChat
 
     # for client
     client = Stomp::Client.new(hash)
-
-    # for connection
-    #connection = Stomp::Connection.new(hash)
+    queue = User.where(name: user_name).first.queue
+    puts "Connecting to queue #{queue}"
 
     while (true)
-      message = gets
-      client.publish("/queue/test_7351b56a54bc7bc84cf721c5f47b6989", message.to_s)
-      #client.publish("/queue/test2", message.to_s)
+      message = STDIN.gets
+      client.publish(queue, message.to_s)
     end
   end
 end
 
-ConsoleChat.new
+ConsoleChat.new(ARGV[0])
