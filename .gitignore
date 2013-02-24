@@ -9,6 +9,7 @@
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
+/bin/apache-activemq-5.7.0/data
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
