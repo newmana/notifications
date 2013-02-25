@@ -2,7 +2,10 @@
 
 A simple example using Rails, ActiveMQ, JavaScript, STOMP and Websockets.
 
-ActiveMQ is located in the ./bin directory.
+Bits of ActiveMQ are located in the ./bin directory.
+
+To send messages to the server run:
+rails runner console_chat.rb username
 
 == Links
 
