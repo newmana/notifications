@@ -1,6 +1,8 @@
 == Notifications using Websockets
 
-Simple example using Rails, ActiveMQ, JavaScript, STOMP and Websockets.
+A simple example using Rails, ActiveMQ, JavaScript, STOMP and Websockets.
+
+ActiveMQ is located in the ./bin directory.
 
 == Links
 
